@@ -1,4 +1,4 @@
-# Tutorial-Ros1-Ros2-Autominy-
+# Tutorial para migración del proyecto Autominy de ROS noetic a ROS humble
 
 Este repositorio contiene el código para controlar un carrito AutoMiny con ROS2.
 
