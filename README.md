@@ -33,5 +33,5 @@ La migración incluye la conversión de nodos a ROS2, actualización de launch f
 ## ¿Cómo instalar el proyecto autominy?
 Visitar [Autominy](https://autominy.github.io/AutoMiny/docs/installation/)
 
-Luis Joto
+Luis Perro
 ##
