@@ -1,0 +1,16 @@
+build/
+install/
+log/
+*.pyc
+*.swp
+*.swo
+*.log
+*.gv
+*.db
+*.rviz
+*.backup
+.DS_Store
+Thumbs.db
+*.old
+*.orig
+*.tmp
