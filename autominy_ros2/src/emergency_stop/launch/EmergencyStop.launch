@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<launch>
+    <![CDATA[
+    <!--
+          FOR DEBUGGING: add to node tag: launch-prefix="gnome-terminal -x gdb --args"
+    -->
+    ]]>
+
+    <!-- start standalone node -->
+    <node respawn="true" respawn_delay="1"
+          pkg="emergency_stop"
+          name="emergency_stop"
+          exec="emergency_stop_node"
+          output="screen"
+    >
+    </node>
+</launch>

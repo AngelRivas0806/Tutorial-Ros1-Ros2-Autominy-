@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<launch>
+    <![CDATA[
+    <!--
+          FOR DEBUGGING: add to node tag: launch-prefix="gnome-terminal -x gdb --args"
+    -->
+    ]]>
+
+    <!-- start standalone node -->
+    <node
+          pkg="odometry"
+          name="odometry"
+          exec="odometry_node"
+          output="screen"
+    >
+    </node>
+</launch>

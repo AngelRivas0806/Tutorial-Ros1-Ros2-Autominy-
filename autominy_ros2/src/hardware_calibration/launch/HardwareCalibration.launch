@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<launch>
+    <![CDATA[
+    <!--
+          FOR DEBUGGING: add to node tag: launch-prefix="gnome-terminal -x gdb --args"
+    -->
+    ]]>
+
+
+
+</launch>

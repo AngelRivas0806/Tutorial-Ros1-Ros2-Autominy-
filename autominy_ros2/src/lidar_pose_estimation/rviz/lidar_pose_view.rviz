@@ -1,0 +1,26 @@
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/LaserScan
+      Name: Laser
+      Enabled: true
+      Topic: /scan
+      Queue Size: 10
+      Color: 255; 255; 0
+      Style: Points
+      Size (m): 0.02
+      Alpha: 1.0
+    - Class: rviz_default_plugins/PoseArray
+      Name: Poles
+      Enabled: true
+      Topic: /poles
+      Color: 0; 255; 0
+      Shaft Radius: 0.01
+      Head Radius: 0.03
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+  Fixed Frame: laser
+  Global Options:
+    Background Color: 48; 48; 48
+    Frame Rate: 30
