@@ -35,7 +35,7 @@ source install/setup.bash
 
 ---
 
-## Que es AutoMiny
+## ¿Que es AutoMiny?
 
 AutoMiny es una plataforma educativa de robótica diseñada para facilitar el aprendizaje y la investigación en conducción autónoma a pequeña escala. Su ecosistema incluye:
 
