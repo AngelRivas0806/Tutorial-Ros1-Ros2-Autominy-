@@ -108,6 +108,31 @@ Asegúrate de haber migrado correctamente los mensajes (autominy_msgs) antes de 
 
 ---
 
+### 🛠️ Uso de cámara RealSense
+
+Si vas a utilizar una **cámara Intel RealSense** con ROS2, es necesario incluir el lanzamiento desde el paquete oficial:
+
+```bash
+ros2 launch realsense2_camera rs_launch.py
+```
+
+Asegúrate de tener clonado y compilado el paquete desde el repositorio oficial:
+
+🔗 [realsense-ros (branch ros2-master)](https://github.com/IntelRealSense/realsense-ros/tree/ros2-master)
+
+Puedes integrarlo en tu workspace así:
+
+```bash
+cd ~/ros2_ws/src
+git clone -b ros2-master https://github.com/IntelRealSense/realsense-ros.git
+cd ..
+rosdep install --from-paths src --ignore-src -r -y
+colcon build
+source install/setup.bash
+```
+
+---
+
 ## Simulacion y pruebas
 
 - Visualización en RViz2 usando URDF y tf.
