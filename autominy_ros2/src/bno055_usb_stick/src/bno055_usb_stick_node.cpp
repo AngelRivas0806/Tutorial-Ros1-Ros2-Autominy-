@@ -53,6 +53,10 @@ int main(int argc, char* argv[]) {
     rclcpp::init(argc, argv);
     auto nh = rclcpp::Node("bno055_usb_stick_node");
 
+    std::string device_name;
+    nh.declare_parameter<std::string>("device", "/dev/ttyACM0");
+    nh.get_parameter("device", device_name);
+    
     // load parameters
     pose_frame_id = nh.declare_parameter<std::string>("~pose_frame_id", "fixed");
     const bool publish_tf= nh.declare_parameter<bool>("~publish_tf", false);
@@ -73,7 +77,8 @@ int main(int argc, char* argv[]) {
 
     // construct the worker
     boost::asio::io_service asio_service;
-    bus::BNO055USBStick device(nh, asio_service, publish);
+    //bus::BNO055USBStick device(nh, asio_service, publish);
+    bus::BNO055USBStick device(nh, asio_service, publish, device_name);
 
     // run the worker
     while (rclcpp::ok()) {

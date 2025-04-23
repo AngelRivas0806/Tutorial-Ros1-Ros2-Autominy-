@@ -58,4 +58,9 @@ ament_target_dependencies(bno055_usb_stick_node bno055_usb_stick_msgs geometry_m
 
 ament_export_include_directories(include)
 ament_export_dependencies(bno055_usb_stick_msgs geometry_msgs rclcpp sensor_msgs tf2_ros rclcpp)
+
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}/
+)
+
 ament_package()

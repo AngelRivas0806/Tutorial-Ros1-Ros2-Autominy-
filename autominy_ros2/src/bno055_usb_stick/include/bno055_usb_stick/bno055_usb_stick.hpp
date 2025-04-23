@@ -32,15 +32,16 @@ namespace bno055_usb_stick {
         typedef boost::function<void(const bno055_usb_stick_msgs::msg::Output&)> Callback;
 
     public:
-        BNO055USBStick(rclcpp::Node& nh, boost::asio::io_service& asio_service, const Callback& callback,
-                       const std::string& ns = "~")
-                : nh(nh),
-                  port_(nh.declare_parameter<std::string>("port", "/dev/ttyIMU")),
-                  timeout_(rclcpp::Duration::from_seconds(nh.declare_parameter("timeout", 1.))),
-                  mode_(nh.declare_parameter<std::string>("mode", "imu")),
-                  serial_(asio_service), timer_(asio_service), callback_(callback), decoder_(nh) {
-            start();
-        }
+	BNO055USBStick(rclcpp::Node& nh, boost::asio::io_service& asio_service, const Callback& callback,
+		       const std::string& device_name)
+		: nh(nh),
+		  port_(device_name),  // aquí usamos el que tú ya leíste desde el main
+		  timeout_(rclcpp::Duration::from_seconds(nh.declare_parameter("timeout", 1.))),
+		  mode_(nh.declare_parameter<std::string>("mode", "imu")),
+		  serial_(asio_service), timer_(asio_service), callback_(callback), decoder_(nh) {
+	    start();
+	}
+
 
         virtual ~BNO055USBStick() { stop(); }
 

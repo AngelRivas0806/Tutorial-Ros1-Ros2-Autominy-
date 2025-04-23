@@ -3,7 +3,8 @@
 
 # Header
 # header.frame_id defines reference frame
-Header header
+std_msgs/Header header
+
 
 # Object frame (analogous to child_frame_id in nav_msgs/Odometry)
 string object_frame_id
@@ -13,11 +14,10 @@ string object_frame_id
 uint16 object_id
 
 # duration this object has been tracked for
-duration age
+builtin_interfaces/Duration age
 
 # duration since last update/confirmation by measurement
-# (set to 0 as soon as a measurement update is available)
-duration prediction_age
+builtin_interfaces/Duration prediction_age
 
 
 # odometry of the object (position, orientation, linear and angular velocities)
@@ -54,7 +54,8 @@ uint16 TRUCK           = 6
 uint16 classification
 
 # duration this object has been classified as current class
-duration classification_age
+builtin_interfaces/Duration classification_age
+
 
 # The higher this value the more reliable the assigned object class [0,1]
 float64 classification_certainty
