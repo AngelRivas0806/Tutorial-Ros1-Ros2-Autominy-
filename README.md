@@ -98,7 +98,7 @@ Para clonar los paquetes:
 
 ```bash
 cd ~/ros2_ws/src
-git clone https://github.com/tu-usuario/autominy_ros2.git
+git clone https://github.com/AngelRivas0806/Tutorial-Ros1-Ros2-Autominy-/tree/main/autominy_ros2/src 
 cd ..
 colcon build
 source install/setup.bash
@@ -132,6 +132,22 @@ source install/setup.bash
 ```
 
 ---
+
+### 🧭 Visualización y prueba de la IMU (BNO055)
+
+Si tienes conectada una IMU BNO055 por USB y deseas probarla en ROS2, ejecuta:
+
+```bash
+ros2 run bno055_usb_stick bno055_usb_stick_node --ros-args -p device:=/dev/ttyACM0 -p frame_id:=imu_link
+
+```
+
+Luego, en otra terminal:
+
+```bash
+ros2 topic echo /output
+
+```
 
 ## Simulacion y pruebas
 
