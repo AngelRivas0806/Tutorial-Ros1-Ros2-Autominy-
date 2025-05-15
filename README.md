@@ -1,4 +1,4 @@
-# Tutorial para la Migración del Proyecto AutoMiny de ROS Noetic a ROS 2 Humble
+# Tutorial para la Migración del Proyecto AutoMiny de ROS Noetic a ROS 2 Humble e implementación con Docker en Raspberry Pi 5
 
 Este repositorio contiene el código migrado y documentación necesaria para controlar un carrito AutoMiny utilizando **ROS 2 Humble** en **Ubuntu 22.04**.
 

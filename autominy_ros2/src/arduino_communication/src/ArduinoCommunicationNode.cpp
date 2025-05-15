@@ -1,10 +1,12 @@
 #include "rclcpp/rclcpp.hpp"
-
 #include "ArduinoCommunication.h"
 
 int main(int argc, char **argv) {
     rclcpp::init(argc, argv);
-    arduino_communication::ArduinoCommunication communication;
-    communication.spin();
+    auto node = std::make_shared<arduino_communication::ArduinoCommunication>(
+        rclcpp::NodeOptions()
+    );
+    rclcpp::spin(node);
     rclcpp::shutdown();
+    return 0;
 }

@@ -1,5 +1,4 @@
 #pragma once
-
 #include "rclcpp/rclcpp.hpp"
 
 #include "sensor_msgs/msg/imu.hpp"
@@ -60,6 +59,14 @@ class ArduinoCommunication : public rclcpp::Node {
     std::string device;
     uint32_t baudrate;
     std::unique_ptr<serial::Serial> serial;
+    std::vector<uint8_t> receiveBuffer;
+    size_t receiveBufferIndex;
+    rclcpp::TimerBase::SharedPtr timer_;
+
+    void handleSerialAndHeartbeat();
 };
+
+
+
 
 }
